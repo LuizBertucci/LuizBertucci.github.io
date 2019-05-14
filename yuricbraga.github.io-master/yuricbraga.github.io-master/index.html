@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!--Google tag manager-->
+    <script src="./site-assets/javascript/google-tag-manager.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Ads: 812484309 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-812484309"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-812484309');
+    </script>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--website own style-->
+    <link rel="stylesheet" href="./assets/css/seupc-style.css">
+    <link rel="shortcut icon" type="image/png" href="./site-assets/media/logotipo-seu-pc.png" />
+
+    <meta name="google-site-verification" content="mjNcXz9JNTE0FdrwSiNsCNqNxn2gX55tLOPYCQw-n7Y" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SeuPC Webapp</title>
+</head>
+
+<body class="grey lighten-4">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBLGPLK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header>
+        <nav>
+            <div class="nav-wrapper blue">
+                <a href="" class="brand-logo center">SeuPC</a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!--Sidenav which will contain the profiles-->
+    <ul id="slide-out" class="sidenav sidenav-fixed grey lighten-4">
+        <li>
+            <a class="subheader">
+                <h4>
+                    Filtros
+                </h4>
+            </a>
+        </li>
+        <!--These are taken from the Sheets-->
+        <li id="filters">
+            <a class="subheader">
+                <h5>
+                    Preço
+                </h5>
+            </a>
+            <a>
+                <label>
+                    <input class="with-gap" name="group-preco" type="radio" onclick="priceFilter([0, Infinity])"
+                        checked />
+                    <span>Todos</span>
+                </label>
+            </a>
+            <a>
+                <label>
+                    <input class="with-gap" name="group-preco" type="radio" onclick="priceFilter([1, 2000])" />
+                    <span>Até R$ 2000</span>
+                </label>
+            </a>
+            <a>
+                <label>
+                    <input class="with-gap" name="group-preco" type="radio" onclick="priceFilter([2000,3000])" />
+                    <span>R$ 2000 até R$ 3000</span>
+                </label>
+            </a>
+            <a>
+                <label>
+                    <input class="with-gap" name="group-preco" type="radio" onclick="priceFilter([3000,4000])" />
+                    <span>R$ 3000 até R$ 4000</span>
+                </label>
+            </a>
+            <a>
+                <label>
+                    <input class="with-gap" name="group-preco" type="radio" onclick="priceFilter([4000,Infinity])" />
+                    <span>Mais de R$ 4000</span>
+                </label>
+            </a>
+        </li>
+    </ul>
+
+    <main>
+        <div class="row">
+            <div class="col s12 left-align">
+                <h5>
+                    Busque pelo notebook certo e economize. É grátis!
+                </h5>
+                <h6 class="valign-wrapper">
+                    <i class="material-icons small">keyboard_arrow_left</i>
+                    Clique ao lado para filtrar suas opções.
+                </h6>
+
+            </div>
+        </div>
+        <div class="row">
+            <div id="first-column" class="col s12 m4 center-align"></div>
+            <div id="second-column" class="col s12 m4 center-align">
+                <div class="preloader-wrapper big active" style="margin-top: 30vh;">
+                    <div class="spinner-layer spinner-blue-only">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="gap-patch">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="third-column" class="col s12 m4 center-align"></div>
+            <div id="error-msg" class="col s12 center-align"></div>
+        </div>
+        <div id="modals">
+
+        </div>
+    </main>
+
+    <footer>
+    </footer>
+
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!--materialize css javascript-->
+    <script src="./assets/js/materialize-config.js"></script>
+    <!--SeuPC javascript-->
+    <script src="./assets/js/seupc.js"></script>
+</body>
+
+</html>

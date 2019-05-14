@@ -1,0 +1,20 @@
+.tabs .tab a.active {
+  color: #0fbc71 !important;
+  background-color: #0fbc7100 !important;
+}
+
+.tabs .tab a:hover {
+  color: #0d8a53;
+}
+
+.tabs .tab a {
+  color: #0fbc71;
+}
+
+.tabs .indicator{
+  background-color: #0fbc71 !important;
+}
+
+.seupc-green{
+    background-color: #0fbc71 !important;
+}
